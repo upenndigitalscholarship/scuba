@@ -1,0 +1,228 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400");
+
+/* 
+========================
+General Styles
+========================
+*/
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  min-width: 100%;
+  min-height: 100vh;
+  background: #00d2ff; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    #00d2ff,
+    #3a7bd5
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    #00d2ff,
+    #3a7bd5
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.1em;
+  color: azure;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+h2 {
+  font-size: 1.5em;
+}
+
+p {
+  padding: 0.6em;
+}
+
+a {
+  color: #FF7F4F;
+}
+
+/* 
+========================
+Component Styles
+========================
+*/
+
+.hvr-fade {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  overflow: hidden;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: color, background-color;
+  transition-property: color, background-color;
+}
+
+.hvr-fade:hover,
+.hvr-fade:focus,
+.hvr-fade:active {
+  background-color: white;
+  color: black;
+}
+
+/* 
+========================
+Nav Styles
+========================
+*/
+
+nav > ul {
+  list-style-type: none;
+  margin: 5px;
+  padding: 5px;
+  float: right;
+}
+
+nav > ul > li {
+  padding: 2px;
+  display: inline;
+}
+
+.navlink {
+  color: white;
+  text-decoration: none;
+  font-size: 1em;
+  opacity: 0.5;
+  filter: alpha(opacity=50); /* For IE8 and earlier */
+}
+
+.navlink:hover {
+  opacity: 0.8;
+  filter: alpha(opacity=80); /* For IE8 and earlier */
+}
+
+.active {
+  opacity: 0.8;
+  filter: alpha(opacity=80); /* For IE8 and earlier */
+}
+
+/* 
+========================
+Homepage & About Page Styles
+========================
+*/
+
+hr {
+  width: 15%;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  border-top: 1px solid white;
+}
+
+button {
+  border: 1px solid white;
+  border-radius: 5px;
+  padding: 1rem 2rem;
+  margin: 1em;
+  text-decoration: none;
+  background: none;
+  font-family: "Open Sans", sans-serif;
+  color: #ffffff;
+  font-size: 1.1em;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+.main {
+  max-width: 70%;
+  margin: 0px auto;
+  line-height: 1.5;
+}
+
+.emphasis {
+  font-style: italic;
+  font-weight: bolder;
+}
+
+.about-subhead {
+  display: inline-block;
+  border-bottom: 2px solid #ffffff;
+}
+
+.about-list {
+  list-style-type: disc;
+  margin-left: 2em;
+}
+
+#about-description {
+  text-align: left;
+}
+
+#content {
+  flex: 1 0 auto;
+  max-width: 75%;
+  margin: 3em auto;
+  text-align: center;
+}
+
+#title {
+  font-size: 1.9em;
+}
+
+#logo {
+  width: 100%;
+  align-content: center;
+}
+
+#logo > img {
+  max-width: 60%;
+}
+
+#description {
+  margin-top: 1em;
+  font-size: 1.3em;
+}
+
+/* 
+========================
+Footer Styles
+========================
+*/
+
+.footer {
+  flex-shrink: 0;
+  margin-bottom: 0.5em;
+  font-size: 0.5em;
+  text-align: center;
+}
+
+/* 
+========================
+Media queries
+========================
+*/
+
+@media screen and (max-width: 600px) {
+  #content {
+    max-width: 95%;
+  }
+
+  #title {
+    font-size: 1.1em;
+  }
+
+  #description {
+    font-size: 1.1em;
+  }
+
+  #about-description {
+    max-width: 80%;
+  }
+}
